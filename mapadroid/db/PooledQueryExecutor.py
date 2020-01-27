@@ -35,7 +35,8 @@ class PooledQueryExecutor:
             "port": self.port,
             "user": self.user,
             "password": self.password,
-            "database": self.database
+            "database": self.database,
+            "time_zone": "America/Los_Angeles"
         }
         self._pool_mutex.acquire()
         self._pool = MySQLConnectionPool(pool_name="db_wrapper_pool",
